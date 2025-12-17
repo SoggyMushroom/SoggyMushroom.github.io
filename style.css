@@ -1,107 +1,125 @@
-/* ----- Basic Reset ----- */
+/* ===== RESET ===== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
+  font-family: Arial, Helvetica, sans-serif;
   color: #222;
   background: #fafafa;
 }
 
-/* ----- Navigation ----- */
-nav.nav {
-  background: #333;
-  padding: 10px;
+/* ===== NAV ===== */
+.nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #111;
+  padding: 12px 0;
+  z-index: 1000;
 }
-nav.nav ul {
+
+.nav ul {
+  list-style: none;
   display: flex;
   justify-content: center;
-  list-style: none;
+  gap: 24px;
 }
-nav.nav ul li {
-  margin: 0 12px;
-}
-nav.nav a {
+
+.nav a {
   color: #fff;
   text-decoration: none;
   font-weight: bold;
 }
-nav.nav a:hover {
-  color: #4CAF50;
+
+.nav a:hover {
+  color: #4caf50;
 }
 
-/* ----- Hero / Home ----- */
+/* ===== SECTIONS ===== */
+.section {
+  min-height: 100vh;
+  padding: 120px 20px 60px;
+  text-align: center;
+}
+
+.section.light {
+  background: #f1f1f1;
+}
+
+/* ===== HOME ===== */
+.home h1 {
+  font-size: 3rem;
+  margin-top: 20px;
+}
+
+.subtitle {
+  margin-top: 8px;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* ===== PROFILE PHOTO (AS REQUESTED) ===== */
 .profile-photo {
   width: 150px;
   border-radius: 50%;
   margin-top: 12px;
 }
-.hero-section {
-  background: #f3f3f3;
-  text-align: center;
-  padding: 60px 20px;
-}
-.hero-section h1 {
-  font-size: 3rem;
-}
-.hero-section p {
-  margin: 8px 0;
-}
 
-/* ----- About ----- */
-#about {
-  padding: 40px 20px;
-  text-align: center;
-}
-.skills {
-  max-width: 600px;
+/* ===== SKILLS ===== */
+.skill {
+  max-width: 500px;
   margin: 20px auto;
   text-align: left;
 }
-.skill {
-  margin-bottom: 12px;
-}
+
 .skill span {
   font-weight: bold;
 }
+
 .bar {
   width: 100%;
-  background: #ddd;
   height: 10px;
+  background: #ddd;
   border-radius: 5px;
-  overflow: hidden;
   margin-top: 6px;
-}
-.bar .fill {
-  height: 100%;
-  background: #4CAF50;
+  overflow: hidden;
 }
 
-/* ----- Contact ----- */
-#contact {
-  background: #fff;
-  padding: 40px 20px;
-  text-align: center;
+.fill {
+  height: 100%;
+  background: #4caf50;
 }
-#contact a {
-  color: #4CAF50;
+
+/* ===== CONTACT ===== */
+.links {
+  margin-top: 15px;
+}
+
+.links a {
+  margin: 0 10px;
+  color: #4caf50;
   text-decoration: none;
 }
 
-/* ----- Footer ----- */
+/* ===== FOOTER ===== */
 footer {
-  background: #222;
+  background: #111;
   color: #fff;
-  text-align: center;
   padding: 10px;
-  margin-top: 30px;
+  text-align: center;
 }
 
-/* ----- Responsive ----- */
+/* ===== RESPONSIVE ===== */
 @media (max-width: 600px) {
-  .hero-section h1 { font-size: 2.5rem; }
-  .skills { width: 90%; }
+  .home h1 {
+    font-size: 2.3rem;
+  }
 }
+
