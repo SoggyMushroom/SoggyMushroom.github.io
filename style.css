@@ -13,6 +13,9 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   color: #222;
   background: #fafafa;
+
+  /* snap scrolling */
+  scroll-snap-type: y mandatory;
 }
 
 /* ===== NAV ===== */
@@ -45,8 +48,15 @@ body {
 /* ===== SECTIONS ===== */
 .section {
   min-height: 100vh;
-  padding: 120px 20px 60px;
+  padding: 80px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
+
+  /* snap point */
+  scroll-snap-align: start;
 }
 
 .section.light {
@@ -54,29 +64,34 @@ body {
 }
 
 /* ===== HOME ===== */
+.home {
+  background: #f7f7f7;
+}
+
 .home h1 {
-  font-size: 3rem;
-  margin-top: 20px;
+  font-size: 3.5rem;
+  margin-bottom: 10px;
 }
 
 .subtitle {
-  margin-top: 8px;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   color: #555;
 }
 
 /* ===== PROFILE PHOTO (AS REQUESTED) ===== */
 .profile-photo {
-  width: 150px;
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
   border-radius: 50%;
   margin-top: 12px;
 }
 
 /* ===== SKILLS ===== */
 .skill {
-  max-width: 500px;
-  margin: 20px auto;
-  text-align: left;
+  width: 500px;
+  max-width: 90%;
+  margin: 25px 0;
 }
 
 .skill span {
