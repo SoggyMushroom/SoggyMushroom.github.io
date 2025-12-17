@@ -1,0 +1,107 @@
+/* ----- Basic Reset ----- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #222;
+  background: #fafafa;
+}
+
+/* ----- Navigation ----- */
+nav.nav {
+  background: #333;
+  padding: 10px;
+}
+nav.nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+nav.nav ul li {
+  margin: 0 12px;
+}
+nav.nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+nav.nav a:hover {
+  color: #4CAF50;
+}
+
+/* ----- Hero / Home ----- */
+.profile-photo {
+  width: 150px;
+  border-radius: 50%;
+  margin-top: 12px;
+}
+.hero-section {
+  background: #f3f3f3;
+  text-align: center;
+  padding: 60px 20px;
+}
+.hero-section h1 {
+  font-size: 3rem;
+}
+.hero-section p {
+  margin: 8px 0;
+}
+
+/* ----- About ----- */
+#about {
+  padding: 40px 20px;
+  text-align: center;
+}
+.skills {
+  max-width: 600px;
+  margin: 20px auto;
+  text-align: left;
+}
+.skill {
+  margin-bottom: 12px;
+}
+.skill span {
+  font-weight: bold;
+}
+.bar {
+  width: 100%;
+  background: #ddd;
+  height: 10px;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-top: 6px;
+}
+.bar .fill {
+  height: 100%;
+  background: #4CAF50;
+}
+
+/* ----- Contact ----- */
+#contact {
+  background: #fff;
+  padding: 40px 20px;
+  text-align: center;
+}
+#contact a {
+  color: #4CAF50;
+  text-decoration: none;
+}
+
+/* ----- Footer ----- */
+footer {
+  background: #222;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  margin-top: 30px;
+}
+
+/* ----- Responsive ----- */
+@media (max-width: 600px) {
+  .hero-section h1 { font-size: 2.5rem; }
+  .skills { width: 90%; }
+}
