@@ -129,8 +129,11 @@ body {
 /* ================= ABOUT ================= */
 .about {
   background: #f5f5f5;
-  padding: 100px 20px 80px; /* Increased top padding */
+  padding: 100px 20px; /* Remove bottom padding, let content dictate height */
   scroll-snap-align: start;
+  min-height: auto !important; /* Override the 100vh */
+  height: auto; /* Let content determine height */
+  justify-content: flex-start; /* Start content at top */
 }
 
 .about-container {
@@ -140,12 +143,13 @@ body {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  margin: 0 auto;
 }
 
 .section-title {
-  font-size: 3rem; /* Larger font */
+  font-size: 3rem;
   color: #2E7D32;
-  margin-bottom: 80px; /* Much more space below title */
+  margin-bottom: 80px;
   text-align: center;
   width: 100%;
 }
@@ -154,7 +158,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 100px; /* Increased space between profile and skills */
+  margin-bottom: 100px;
   width: 100%;
 }
 
@@ -163,7 +167,7 @@ body {
   height: 220px;
   border-radius: 50%;
   object-fit: cover;
-  margin-bottom: 50px; /* More space below photo */
+  margin-bottom: 50px;
   border: 5px solid white;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
@@ -175,7 +179,7 @@ body {
 
 .about-text {
   max-width: 700px;
-  margin: 0 auto 25px; /* Center text and add bottom margin */
+  margin: 0 auto 25px;
   font-size: 1.2rem;
   line-height: 1.6;
   color: #444;
@@ -188,13 +192,14 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 40px; /* Space above skills section */
+  margin-top: 40px;
+  margin-bottom: 60px; /* Add bottom margin for spacing */
 }
 
 .skills-title {
-  font-size: 2.5rem; /* Larger font */
+  font-size: 2.5rem;
   color: #2E7D32;
-  margin-bottom: 60px; /* More space below title */
+  margin-bottom: 60px;
   text-align: center;
   width: 100%;
 }
@@ -204,14 +209,14 @@ body {
   width: 100%;
   max-width: 700px;
   background: white;
-  padding: 50px; /* More padding */
-  border-radius: 15px; /* Rounded corners */
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); /* Softer shadow */
+  padding: 50px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
   margin-top: 20px;
 }
 
 .skill {
-  margin-bottom: 40px; /* More space between skills */
+  margin-bottom: 40px;
   text-align: left;
 }
 
@@ -223,13 +228,13 @@ body {
   font-weight: bold;
   color: #333;
   display: block;
-  margin-bottom: 15px; /* More space below skill name */
+  margin-bottom: 15px;
   font-size: 1.2rem;
 }
 
 .bar {
   background: #e0e0e0;
-  height: 14px; /* Slightly thicker */
+  height: 14px;
   border-radius: 7px;
   margin-top: 8px;
   overflow: hidden;
@@ -246,7 +251,7 @@ body {
 }
 
 .subskills {
-  margin-left: 25px; /* More indentation */
+  margin-left: 25px;
   margin-top: 20px;
 }
 
@@ -258,11 +263,17 @@ body {
   margin-bottom: 0;
 }
 
+
 /* ================= PROJECTS ================= */
 .projects {
   background: white;
-  padding: 100px 20px 80px; /* More top padding */
+  padding: 100px 20px 80px;
   scroll-snap-align: start;
+  min-height: 100vh; /* Keep 100vh for this section */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .projects-container {
