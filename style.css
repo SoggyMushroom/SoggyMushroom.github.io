@@ -258,12 +258,10 @@ body {
 
 /* ================= CONTACT ================= */
 .contact {
-  background: #ffffff;
-  color: rgb(33, 61, 37);
-  padding: 40px 20px;
-  text-align: center;
+  position: relative;
   width: 100%;
-  margin-top: auto;
+  overflow: hidden;
+  text-align: center;
 }
 .contact-content {
   max-width: 800px;
