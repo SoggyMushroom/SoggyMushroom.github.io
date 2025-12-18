@@ -257,14 +257,6 @@ body {
 }
 
 /* ================= CONTACT ================= */
-.connect {
-  background: #2E7D32;
-  color: white;
-  padding: 40px 20px;
-  text-align: center;
-  width: 100%;
-  margin-top: auto;
-}
 
 .contact-content {
   max-width: 800px;
@@ -312,6 +304,19 @@ body {
 }
 
 /* Connect bar */
+.connect {
+  background: #2E7D32;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+  width: 100%;
+  margin-top: auto;
+}
+
+.connect-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
 .connect-bar {
   margin-top: 40px;
   padding-top: 20px;
