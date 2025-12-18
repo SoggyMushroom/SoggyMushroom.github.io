@@ -300,59 +300,174 @@ body {
   margin-bottom: 10px;
 }
 
-/* ================= RESPONSIVE ================= */
-@media (max-width: 1100px) {
-  .info-boxes {
-    gap: 20px;
-  }
-  
-  .info-box {
-    width: 300px;
-    height: 360px;
-  }
+/* ================= CONTACT SECTION ================= */
+.contact {
+  background: white;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 20px;
+  position: relative;
 }
 
-@media (max-width: 900px) {
-  .info-boxes {
+.contact-container {
+  max-width: 800px;
+  width: 100%;
+  text-align: center;
+  padding: 60px 40px;
+  background: #f9f9f9;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.contact h1 {
+  font-size: 3rem;
+  color: #2E7D32;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+}
+
+.contact-text {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 50px;
+  line-height: 1.6;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.contact .btn.primary {
+  background: #2E7D32;
+  color: white;
+  border: 2px solid #2E7D32;
+  padding: 15px 35px;
+  font-size: 1.1rem;
+}
+
+.contact .btn.primary:hover {
+  background: #1B5E20;
+  border-color: #1B5E20;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.contact .btn.secondary {
+  border: 2px solid #2E7D32;
+  color: #2E7D32;
+  background: transparent;
+  padding: 15px 35px;
+  font-size: 1.1rem;
+}
+
+.contact .btn.secondary:hover {
+  background: #2E7D32;
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* ================= FOOTER ================= */
+.footer {
+  background: #2E7D32;
+  color: white;
+  padding: 25px 20px;
+  text-align: center;
+  width: 100%;
+}
+
+.connect-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  font-size: 1rem;
+}
+
+.connect-bar span {
+  opacity: 0.9;
+}
+
+.linkedin-link {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 20px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.linkedin-link:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: white;
+  transform: translateY(-2px);
+}
+
+/* If you want to add the LinkedIn icon later, you can use this: */
+/*
+.linkedin-link::before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url('linkedin-icon.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+*/
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .contact h1 {
+    font-size: 2.5rem;
+  }
+  
+  .contact-text {
+    font-size: 1.1rem;
+    padding: 0 15px;
+  }
+  
+  .contact-buttons {
     flex-direction: column;
     align-items: center;
+    gap: 15px;
   }
   
-  .info-box {
-    width: 100%;
-    max-width: 400px;
-    height: auto;
-    min-height: 380px;
-  }
-}
-
-@media (max-width: 768px) {
-  .about {
-    padding: 60px 15px;
+  .contact .btn.primary,
+  .contact .btn.secondary {
+    width: 250px;
+    text-align: center;
   }
   
-  .about-text {
-    font-size: 1.1rem;
-    max-width: 700px;
-  }
-  
-  .box-text {
-    padding: 20px;
-  }
-  
-  .skills {
-    padding: 30px 20px;
+  .connect-bar {
+    flex-direction: column;
+    gap: 10px;
   }
 }
 
 @media (max-width: 480px) {
-  .about-text {
-    font-size: 1rem;
-    padding: 0 10px;
+  .contact h1 {
+    font-size: 2rem;
   }
   
-  .profile-photo {
-    width: 160px;
-    height: 160px;
+  .contact-text {
+    font-size: 1rem;
+  }
+  
+  .contact-container {
+    padding: 40px 20px;
   }
 }
